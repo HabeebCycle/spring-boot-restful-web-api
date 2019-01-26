@@ -1,4 +1,4 @@
-package com.cycle.habeeb.springbootrestapi;
+package com.cycle.habeeb.springbootrestapi.helloworld;
 
 public class HelloBean {
 
