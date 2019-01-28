@@ -26,7 +26,7 @@ public class UserResource {
 	@Autowired
 	private UserService userService;
 
-	@GetMapping("users")
+	@GetMapping("/users")
 	public List<User> getAllUsers(){
 		return userService.findAll();
 	}
@@ -47,7 +47,7 @@ public class UserResource {
 		return resource;
 	}
 	
-	@DeleteMapping("users/{id}")
+	@DeleteMapping("/users/{id}")
 	public void deleteUser(@PathVariable int id) {
 		User user = userService.deleteById(id);
 		if(user==null) {
@@ -55,7 +55,7 @@ public class UserResource {
 		}
 	}
 	
-	@PostMapping("users")
+	@PostMapping("/users")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
 		User createdUser = userService.save(user);
 		
